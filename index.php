@@ -10,7 +10,9 @@
     <script src="js/script.js"></script>
     <title>ANA SAYFA</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" </head>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css" 
+    <link rel="icon" href="favicon.ico">    
+</head>
 
 <body>
     <div class="form">
@@ -49,9 +51,9 @@
     </div>
 
     <div class="return" id="panel">
-        Takip Edilen Topic: 
+        Takip Edilen Topic:
         <div class="topic-name" id="topic-name">
-            
+
         </div>
     </div>
 

@@ -9,7 +9,7 @@ function yayinla(){
 		data:{'client_id': client_id, 'topic': topic, 'message': message},
 		datatype: "json",
 		success:function(veri){
-			console.log(veri);
+			
 		}
 	})
 }
@@ -31,19 +31,20 @@ function takipEt2(){
 		data:{'client_id': client_id, 'topic': topic},
 		datatype: "json",
 		success:function(veri){
-			var date = new Date();
-			veri += '<br>';
-			veri += date.getHours();
-			veri += ':';
-			veri += date.getMinutes();
-			veri += ':';
-			veri += date.getSeconds();
-			console.log(veri);
-			var panel = document.getElementById("panel");
-			var satir = document.createElement("p");
-			$(satir)
-			.html(veri)
-			.appendTo(panel);
+			if(veri != "" && veri != " "){
+				var date = new Date();
+				veri += '<br>';
+				veri += date.getHours();
+				veri += ':';
+				veri += date.getMinutes();
+				veri += ':';
+				veri += date.getSeconds();
+				var panel = document.getElementById("panel");
+				var satir = document.createElement("p");
+				$(satir)
+				.html(veri)
+				.appendTo(panel);	
+			}
 			takipEt2();
 		}
 	})

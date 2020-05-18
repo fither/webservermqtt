@@ -15,10 +15,15 @@ function yayinla(){
 }
 
 function takipEt(){
+	var topic = document.getElementById("topic").value;
+	var topc_name = document.getElementById("topic-name");
+	topc_name.innerHTML = topic;
+	takipEt2();
+}
+
+function takipEt2(){
 	var client_id = document.getElementById("client_id").value;
 	var topic = document.getElementById("topic").value;
-	var topic_name = document.getElementById("topic-name");
-	topic_name.innerText = topic;
 	
 	$.ajax({
 		type:"post",
@@ -39,7 +44,7 @@ function takipEt(){
 			$(satir)
 			.html(veri)
 			.appendTo(panel);
-			takipEt();
+			takipEt2();
 		}
 	})
 }

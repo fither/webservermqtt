@@ -22,10 +22,17 @@ function takipEt(){
 	
 	$.ajax({
 		type:"post",
-		url:"sub2.php",
+		url:"sub.php",
 		data:{'client_id': client_id, 'topic': topic},
 		datatype: "json",
 		success:function(veri){
+			var date = new Date();
+			veri += '<br>';
+			veri += date.getHours();
+			veri += ':';
+			veri += date.getMinutes();
+			veri += ':';
+			veri += date.getSeconds();
 			console.log(veri);
 			var panel = document.getElementById("panel");
 			var satir = document.createElement("p");

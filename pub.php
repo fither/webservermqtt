@@ -1,15 +1,10 @@
 <?php 
 	require_once "connect.php";
-	require_once 'phpMQTT/phpMQTT.php';
-	// require_once 'vendor/bluerhinos/phpmqtt/phpMQTT.php';
+	require_once 'phpMQTT.php';
 	
 	$topic = $_POST["topic"];
 	$message = $_POST["message"];
 	$client_id = $_POST["client_id"];
-
-	// $topic = "message/istanbul";
-	// $message = "hello world";
-	// $client_id = "client_id";
 
 	$mqtt = new Bluerhinos\phpMQTT($server, $port, $client_id);
 	if ($mqtt->connect(true, NULL, $user, $pass)) {
